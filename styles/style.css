@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/images/clouds.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.road {
+    height: 200px;
+    width: 500%;
+    display: block;
+    background-image: url(/images/road.jpg);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    animation: road 5s linear infinite;
+}
+
+@keyframes road {
+    100% {
+        transform: translateX(-3400px);
+    }
+}
+
+.city {
+    height: 600px;
+    width: 1700px;
+    display:block;
+    background-image: url(/images/city.png);
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.car1 {
+    width: 600px;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    animation: car1 5s linear infinite;
+}
+
+@keyframes car1 {
+    from {
+        left: -500px;
+    }
+    to {
+        left: 1500px;
+    }
+}
+
+.car1 img{
+    width: 80%;
+}
+
+.porsche_wheel {
+    left: 41%;
+    bottom: 122px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.porsche_wheel img {
+    width: 75px;
+    height: 75px;
+    animation: wheels 0.5s linear infinite;
+}
+
+.car1_front_wheel {
+    left: 82px;
+    position: absolute;
+}
+
+.car1_rear_wheel {
+    left: -170px;
+    position: absolute
+}
+
+@keyframes wheels {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.car2 {
+    width: 600px;
+    bottom: 100px;
+    position: absolute;
+    z-index: 1;
+    animation: car2 5s linear infinite;
+}
+
+@keyframes car2 {
+    from {
+        right: -500px;
+    }
+    to {
+        right: 1500px;
+    }
+}
+
+.car2 img{
+    width: 80%;
+}
+
+.cooper_wheel {
+    left: 41%;
+    bottom: 100px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.cooper_wheel img {
+    width: 67px;
+    height: 67px;
+    animation: wheels2 0.5s linear infinite;
+}
+
+.car2_front_wheel {
+    left: 90px;
+    position: absolute;
+}
+
+.car2_rear_wheel {
+    left: -170px;
+    position: absolute
+}
+
+@keyframes wheels2 {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
